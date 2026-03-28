@@ -1,11 +1,33 @@
-import React from 'react'; 
+import type { ReactNode, HTMLAttributes } from 'react';
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
+interface CardProps extends HTMLAttributes<HTMLDivElement> {
+  variant?: 'default' | 'interactive' | 'achievement';
+  glowColor?: string;
+  children: ReactNode;
+}
 
-export const Card: React.FC<CardProps> = ({ className, children, ...props }) => {
+export function Card({
+  variant = 'default',
+  glowColor,
+  children,
+  className = '',
+  ...props
+}: CardProps) {
+  const baseStyles = 'rounded-2xl border transition-all duration-200';
+
+  const variantStyles = {
+    default: 'bg-dark-900 border-dark-700',
+    interactive: 'bg-dark-900 border-dark-700 hover:border-primary-500/50 hover:shadow-lg hover:shadow-primary-900/20 cursor-pointer active:scale-[0.98]',
+    achievement: 'bg-dark-900 border-accent-500/30 shadow-lg shadow-accent-900/10',
+  };
+
   return (
     <div
-      className={`bg-gray-800 border border-gray-700 rounded-lg p-6 ${className || ''}`}
+      className={`${baseStyles} ${variantStyles[variant]} ${className}`}
+      style={glowColor ? { boxShadow: `0 0 20px ${glowColor}20` } : undefined}
       {...props}
-   "N‚ˆØÚ[™[ŸBˆÙ]‚ˆ
-NÂŸNÂ
+    >
+      {children}
+    </div>
+  );
+}

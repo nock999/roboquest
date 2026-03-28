@@ -29,10 +29,11 @@ export function AchievementsPage() {
                 {achievement.unlocked ? achievement.icon : <Lock className="w-8 h-8 text-dark-600 mx-auto" />}
               </div>
               <h3 className="text-sm font-bold text-white mb-1">{achievement.title}</h3>
-              <p className="text-xs text-dark-500">{ahtievement.description}</p>
+              <p className="text-xs text-dark-500">{achievement.description}</p>
             </Card>
           </motion.div>
         ))}
       </div>
     </div>
-  (ŸBŽ‹
+  );
+}

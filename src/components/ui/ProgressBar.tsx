@@ -57,4 +57,5 @@ export function ProgressBar({
         />
       </div>
     </div>
-  (ŸB
+  );
+}

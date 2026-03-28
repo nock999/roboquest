@@ -57,4 +57,5 @@ export function ConceptScreen({ screen }: ConceptScreenProps) {
         ))}
       </motion.div>
     </div>
-  (ŸJ£
+  );
+}
