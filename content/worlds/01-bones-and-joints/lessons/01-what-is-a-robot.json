@@ -23,7 +23,7 @@
     },
     {
       "type": "concept",
-      "title": "ReaR-dúrmd Robots",
+      "title": "Real-World Robots",
       "content": "Let's check some examples:\n\n**Mars Rover (Curiosity):** Senses terrain with cameras and sensors â†’ Thinks about where to go and what to study â†’ Acts by driving wheels and operating tools. **100% robot.**\n\n**Factory Welding Arm:** Senses its position with encoders â†’ Thinks about where the next weld should happen â†’ Acts by moving joints and striking the arc. **100% robot.**\n\n**Your Roomba:** Senses obstacles with bump sensors and lidar â†’ Thinks about cleaning patterns â†’ Acts by spinning brushes and driving wheels. **100% robot.**\n\n**Your Smartphone:** Senses screen touches, motion, light â†’ Thinks about which app to run â†’ Acts by displaying images and playing sounds. **Actually a robot!**\n\n**A Toaster:** You put bread in, it heats it, pops it out. No sensors, no thinking. **Just a heating machine.**",
       "illustration": "ğŸ”´ğŸ”§ğŸ¤–ğŸ“±ğŸ"
     },
@@ -52,7 +52,7 @@
     {
       "type": "guided_challenge",
       "title": "Build Your Understanding",
-      "content": "Here's a smart security camera outside a house. Let's trace its sense-think-act loop:\n\n**SENSE:** The camera has an infrared sensor that detects motion at night. A microprocessor detects a heat signature approaching the door.\n\n*(THINK:** The microprocessor recognizes this might be a person and checks: Is it on the \"approved\" list? No. Is it after midnight? Yes. Alert status?\n\n*(ACT:** The camera sends a notification to your phone, turns on the porch light, and records 10 seconds of video.\n\nThat's a robot. Every step matters. Remove any one part, and it's not a robot anymore.",
+      "content": "Here's a smart security camera outside a house. Let's trace its sense-think-act loop:\n\n**SENSE:** The camera has an infrared sensor that detects motion at night. A microprocessor detects a heat signature approaching the door.\n\n**THINK:** The microprocessor recognizes this might be a person and checks: Is it on the \"approved\" list? No. Is it after midnight? Yes. Alert status?\n\n**ACT:** The camera sends a notification to your phone, turns on the porch light, and records 10 seconds of video.\n\nThat's a robot. Every step matters. Remove any one part, and it's not a robot anymore.",
       "illustration": "ğŸ“·ğŸŒ™"
     },
     {
@@ -64,11 +64,11 @@
         "type": "classification",
         "params": {
           "items": [
-            { "name": "Scenario B", "correct": "robot" },
+            { "name": "Smart refrigerator (monitors temperature, alerts if door open too long)", "correct": "robot" },
             { "name": "Electric mixer (blends food when you press the button)", "correct": "not" },
             { "name": "Automatic sliding door (opens when it senses movement)", "correct": "robot" },
             { "name": "Traditional alarm clock (rings at a preset time)", "correct": "not" },
-            { "name": "SeeÃ=from the previous spy: robot / Not?", "correct": "robot" }
+            { "name": "Self-driving car (senses road, thinks about navigation, controls steering)", "correct": "robot" }
           ]
         }
       }
@@ -88,4 +88,20 @@
           {
             "text": "A Mars rover that collects rock samples",
             "correct": false,
-            "feedback": "A É½Ù•ÈÍ•¹Í•ÌÑ•ÉÉ…¥¸°Ñ¡¥¹­Ì…‰½ÕĞ¹…Ù¥…Ñ¥½¸°…¹…ÑÌ‰äµ½Ù¥¹œ¸%ĞÌ„É½‰½Ğ¸ˆ(€€€€€€€€€ô°(€€€€€€€€€ì(€€€€€€€€€€€€‰Ñ•áĞˆè€‰Ñ½…ÍÑ•ÈÑ¡…Ğ¡•…ÑÌ‰É•…™½È€Ìµ¥¹ÕÑ•Ì…¹Á½ÁÌ¥ĞÕÀˆ°(€€€€€€€€€€€€‰½ÉÉ•ĞˆèÑÉÕ”°(€€€€€€€€€€€€‰™••‘‰…¬ˆè€‰½ÉÉ•Ğ„Ñ½…ÍÑ•È‘½•Í¸ĞÍ•¹Í”…¹åÑ¡¥¹œ…‰½ÕĞÑ¡”‰É•…¸%Ğ©ÕÍĞÉÕ¹Ì½¸„Ñ¥µ•È¸%ĞÌ„¡•…Ñ¥¹œµ…¡¥¹”°¹½Ğ„É½‰½Ğ¸ˆ(€€€€€€€€€ô°(€€€€€€€€€ì(€€€€€€€€€€€€‰Ñ•áĞˆè€‰É½‰½ĞÙ…ÕÕ´Ñ¡…ĞÍ•¹Í•Ì½‰ÍÑ…±•Ì…¹±•…¹Ì¥¸Á…ÑÑ•É¹Ìˆ°(€€€€€€€€€€€€‰½ÉÉ•Ğˆè™…±Í”°(€€€€€€€€€€€€‰™••‘‰…¬ˆè€‰Ù…ÕÕ´Í•¹Í•Ì½‰ÍÑ…±•Ì°Ñ¡¥¹­Ì…‰½ÕĞ¥ÑÌ±•…¹¥¹œÁ…Ñ °…¹…ÑÌ‰äµ½Ù¥¹œ¸•™¥¹¥Ñ•±ä„É½‰½Ğ¸ˆ(€€€€€€€€€ô(€€€€€€€t(€€€€€ô(€€€ô(€t)ô(
+            "feedback": "A rover senses terrain, thinks about navigation, and acts by moving. It's a robot."
+          },
+          {
+            "text": "A toaster that heats bread for 3 minutes and pops it up",
+            "correct": true,
+            "feedback": "Correct! A toaster doesn't sense anything about the bread. It just runs on a timer. It's a heating machine, not a robot."
+          },
+          {
+            "text": "A robot vacuum that senses obstacles and cleans in patterns",
+            "correct": false,
+            "feedback": "A vacuum senses obstacles, thinks about its cleaning path, and acts by moving. Definitely a robot."
+          }
+        ]
+      }
+    }
+  ]
+}
