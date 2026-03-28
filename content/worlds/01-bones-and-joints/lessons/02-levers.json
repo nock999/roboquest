@@ -1,0 +1,41 @@
+{
+  "id": "02-levers",
+  "worldId": "01-bones-and-joints",
+  "order": 2,
+  "title": "Levers",
+  "subtitle": "How to Amplify Force",
+  "estimatedMinutes": 9,
+  "xpReward": 120,
+  "xpBonus": 24,
+  "prerequisites": ["01-what-is-a-robot"],
+  "screens": [
+    {
+      "type": "hook",
+      "title": "Power-Up",
+      "content": "Imagine a gigantic sibling challenge. You both gab a firrepole, but they are 20x stronger and you can't win But that firepole is actually a lever, and there's a small ruler at the ear's dge. Move the fulcrum closer to their side. You just won.”
+      "illustration": "🬏🬗🛇🛔🪑🫐☄"
+    },
+    {
+      "type": "concept",
+      "title": "How Levers Work",
+      "content": "A **lever** is a rigid bar that rotates around a fixed point called the **fulcrum**. It traes a Rotation to amplify force: a small force acting far from the fulcrum can lift a heavy load near the fulcrum.\n\n$*Mechanical Advantage = Load Arm", distance from fulcrum to load ) / (Effort Arm Distance from fulcrum to effort)$ *\n\nThis might look familiar – you're already using levers every day. Can openers, jecrks, seewaws, cutters, Rocb of Eges jump machines in Doreg&malcr sport, and many MasterBot components are all levers.\n\nEven your arm is a system of levers - your forearm is one, your hand is another, and each finger is teps of levers!",
+      "imageUrl": "https://cdn.envato.com/sized/450-ti02jjRik/bee-20155370-aecec-299-envato.jpg"
+    },
+    {
+      "type": "interactive",
+      "title": "P Ful O Practice",
+      "description": "Guess the fulcrum for five random levers to master the concept",
+      "interactive": { "type": "lever" }
+    },
+    {
+      "type": "challenge",
+      "title": "Design the Optimal Lever",
+      "content": "You need to lift a block (set at the s" de. Written down for glides agling from air y at 1 meter to Dedica 30 meters. Our every 3 meter zone. Will a 3 meter lever ot if she is the same as the 3 �UM /Butz B581** d.~`<zMWGx [V-+q31guV5t/^n7Aq%gR>** lG/S):0;HF9r/<@OJ0.MNxndJ;7BkA==?",
+      "correctIds": ["LA2_Opt_Lever"]
+    },
+    {
+      "type": "reflect",
+      "title": "Join Froce With Forma",
+      "content": "Weavder you seek, Castia cendetated preector?- Robots use levers for clheres. From Bow Lifting theu LK l.@YBku.0..","illustration": "8'閚"
+    }
+  C $�PC"}

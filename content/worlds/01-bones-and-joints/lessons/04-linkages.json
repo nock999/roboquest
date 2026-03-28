@@ -1,0 +1,118 @@
+{
+  "id": "04-linkages",
+  "worldId": "01-bones-and-joints",
+  "order": 4,
+  "title": "Linkages",
+  "subtitle": "Converting Rotation into Complex Motion",
+  "estimatedMinutes": 12,
+  "xpReward": 150,
+  "xpBonus": 30,
+  "prerequisites": ["02-levers"],
+  "screens": [
+    {
+      "type": "hook",
+      "title": "The Windshield Wiper: Nature's Linkage",
+      "content": "Watch a windshield wiper blade sweep across a windshield. One motor spins at constant speed, but the blade doesn't just circle — it swings back and forth in a smooth arc.\n\nHow? A **linkage**. A series of connected bars that converts one type of motion (circular rotation) into another (back-and-forth swinging).\n\nLinkages are everywhere: sewing machines, steam engine pistons, car suspensions, robotic arms. They're one of the fundamental tricks roboticists use to create complex motion.",
+      "illustration": "🚗🌧️"
+    },
+    {
+      "type": "concept",
+      "title": "The Four-Bar Linkage",
+      "content": "The most common linkage is the **4-bar linkage**. It has four rigid bars connected at four pivots.\n\nImagine:\n1. A **crank** (input) — rotates continuously\n2. A **coupler** — connects the crank to the output\n3. A **follower** (output) — does the work\n4. A **frame** — the fixed base that ties everything together\n\nDepending on the lengths of these bars, you can create different output motions:\n\n**Crank-Rocker:** Input rotates fully, output rocks back and forth. Great for windshield wipers and robot arms.\n\n**Crank-Slider:** Input rotates, output slides back and forth in a straight line. Great for sewing machine needles and pump pistons.\n\n*(Rocker-Rocker:** Both ends rock back and forth. Less common but useful for certain grabbing motions.",
+      "illustration": "🔄↔️"
+    },
+    {
+      "type": "concept",
+      "title": "Designing the Perfect Linkage",
+      "content": "The beauty of linkages is that small changes in bar length create wildly different motions.\n\nImagine you want a robot to pick up a box with a parallel gripper:\n- The gripper fingers need to move outward and inward in a straight line\n- They need to move at the same speed\n- They need to stop at different positions\n\nA 4-bar linkage with the right proportions can do all of this from a single rotating motor.\n\nBut here's the catch: **Grashof's Law** says that for a 4-bar to continuously rotate, the sum of the shortest and longest bars must be less than or equal to the sum of the other two bars.\n\nGet the proportions wrong, and your linkage will \"jam\" — the crank can't complete a full rotation, or the follower reaches a limit and can't move further.\n\nThis is why engineers spend time with math and simulation before building.",
+      "illustration": "📐🎯"
+    },
+    {
+      "type": "interactive",
+      "title": "Build a Linkage",
+      "content": "Adjust the bar lengths and watch how the motion changes. Can you make a crank-rocker? A crank-slider? Try to make the follower move in the smoothest path possible.",
+      "illustration": "⚙️",
+      "widget": {
+        "type": "linkage-builder",
+        "params": {
+          "crankLengthMin": 0.5,
+          "crankLengthMax": 3,
+          "crankLengthDefault": 1,
+          "couplerLengthMin": 1,
+          "couplerLengthMax": 4,
+          "couplerLengthDefault": 2.5,
+          "followerLengthMin": 0.5,
+          "followerLengthMax": 3,
+          "followerLengthDefault": 1.5,
+          "frameLengthMin": 2,
+          "frameLengthMax": 5,
+          "frameLengthDefault": 3,
+          "crankRotationSpeed": 60,
+          "showTracePoint": true,
+          "showGrashofCheck": true,
+          "animateOnChange": true
+        }
+      }
+    },
+    {
+      "type": "guided_challenge",
+      "title": "Design a Crank-Slider for a Robot",
+      "content": "Your robot needs a jaw that opens and closes in a straight line. A single motor spins the crank at 60 RPM.\n\n**Design:**\n- Crank: 1 cm (short, for fine control)\n- Coupler: 3 cm (long, to transfer motion across distance)\n- Follower: 0.5 cm (almost doesn't move, but controls the slider)\n- Frame: 2.5 cm\n\nWhen you crank rotates, the coupler pulls the slider back and forth. The jaw opens and closes with gentle, controlled motion. Perfect for delicate assembly tasks.\n\nNotice: The shorter the crank, the smaller the opening/closing stroke. That's a trade-off you have to accept.",
+      "illustration": "🤖👄"
+    },
+    {
+      "type": "solo_challenge",
+      "title": "Tdst The Stuck Linkage",
+      "content": "You've built a linkage with these dimensions:\n- Crank: 2 cm\n- Coupler: 1 cm\n- Follower: 2 cm\n- Frame: 6 cm\n\nBut when you power it on, the crank jams after rotating 180 degrees. It won't complete a full rotation.\n\nUsing the linkage simulator, adjust the bar lengths to fix this. Remember Grashof's Law: the shortest + longest must be ≤ sum of the other two.",
+      "illustration": "⚙️",
+      "widget": {
+        "type": "linkage-challenge",
+        "params": {
+          "initialCrankLength": 2,
+          "initialCouplerLength": 1,
+          "initialFollowerLength": 2,
+          "initialFrameLength": 6,
+          "crankLengthMin": 0.5,
+          "crankLengthMax": 4,
+          "couplerLengthMin": 0.5,
+          "couplerLengthMax": 4,
+          "followerLengthMin": 0.5,
+          "followerLengthMax": 4,
+          "frameLengthMin": 2,
+          "frameLengthMax": 8,
+          "targetFullRotation": true,
+          "hintShow": "The shortest + longest bars should be ≤ sum of the other two. Try making the crank shorter or the frame longer."
+        }
+      }
+    },
+    {
+      "type": "reflect",
+      "title": "Understanding Linkage Motion",
+      "question": {
+        "prompt": "What happens if you make the crank bar longer than the frame in a 4-bar linkage?",
+        "type": "multiple_choice",
+        "options": [
+          {
+            "text": "The crank can still rotate fully; motion is unaffected",
+            "correct": false,
+            "feedback": "Not quite. Bar length ratios dramatically affect whether the crank can rotate at all."
+          },
+          {
+            "text": "The crank gets stronger but moves slower",
+            "correct": false,
+            "feedback": "That's more about gears than linkages. Linkage bar lengths affect the pattern of motion, not inherent speed."
+          },
+          {
+            "text": "The linkage jams; the crank can't complete a full rotation",
+            "correct": true,
+            "feedback": "Exactly! If the crank is too long relative to the frame, the geometry forces it to hit a limit. Grashof's Law prevents this when you balance the lengths correctly."
+          },
+          {
+            "text": "The follower bar breaks under stress",
+            "correct": false,
+            "feedback": "Bar length affects motion geometry, not structural stress directly."
+          }
+        ]
+      }
+    }
+  C	=)�(

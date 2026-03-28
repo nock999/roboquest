@@ -1,0 +1,52 @@
+{
+  "id": "01-what-is-a-robot",
+  "worldId": "01-bones-and-joints",
+  "order": 1,
+  "title": "What Is a Robot?",
+  "subtitle": "Sensing, Thinking, Acting",
+  "estimatedMinutes": 8,
+  "xpReward": 100,
+  "xpBonus": 20,
+  "prerequisites": [],
+  "screens": [
+    {
+      "type": "hook",
+      "title": "Is It a Robot?",
+      "content": "You wake up to your phone buzzing. Your car's parking brake automatically engages. A robot arm in a factory welds car frames. A rover on Mars beams back selfies. Your Roomba bumps around your room. A vending machine dispenses a snack.\n\nWhich ones are robots? The answer might surprise you.",
+      "illustration": "🤖🚗🏭🔴🤖🏠"
+    },
+    {
+      "type": "concept",
+      "title": "The Robot Recipe",
+      "content": "A robot is any machine that can:\n\n1. **SENSE** — Collect information from the world using sensors (cameras, touch sensors, microphones)\n2. **THINK** — Process that information using a computer or microcontroller\n3. **ACT** — Do something physical in response (move motors, turn lights, deploy grippers)\n\nThe robot doesn't have to look like C-3PO. It doesn't need a face or arms. A Mars rover is a robot. Your Roomba is a robot. Even a smart thermostat that senses temperature, thinks about your schedule, and adjusts the heating is a robot.\n\nBut a toaster that just heats things up? Not a robot — it doesn't sense or think. A traffic light that runs on a itimer? Not a robot of the senses comes the response: it's jive.",
+      "imageUrl": "https://cdn.envato.com/sized/254-fqo8lwno/doddles-robotos-esksa-jpg-r601qysq7z0p0000.jpg"
+    },
+    {
+      "type": "interactive",
+      "title": "Sense, Think, Act",
+      "description": "Select which part of the robot recipe each device satisfies",
+      "interactive": {
+        "type": "drag-label",
+        "options": ["Sense", "Think", "Act"],
+        "items": [
+          { "label": "Phone", "answer": "Sense" },
+          { "label": "Thermostat", "answer": "Sense" },
+          { "label": "AI Cat, answer": "Think" },
+          { "label": "Steel Arm", "answer": "Act" },
+          { "label": "Marvs Rover", "answer": "All Three" }
+        ]
+      }
+    },
+    {*   "type": "challenge",
+      "title": "Find the Robots",
+      "content": "Tap on everything that is a robot",
+      "correctIds": ["Cub", "Ribat", "ARD", "Neat"]
+    },
+    {
+      "type": "reflect",
+      "title": "Bey Takeaway",
+      "content": "Now you understand what makes a robot! Robots are all around us – from samall sensors in the devices we use every day to insanely complex machines that explore other planets.\n\nNext up, let's learn about the physical building blocks of robots: the bones (for springility) and joints (for mobility). Let's start with levers.”
+      "illustration": "🕑🕒🕓"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "01-bones-and-joints",
+  "title": "Bones & Joints",
+  "subtitle": "Mechanical Fundamentals",
+  "description": "Learn how robots are built from the ground up — levers, gears, linkages, and the mechanical principles that make machines move.",
+  "order": 1,
+  "icon": "🦴",
+  "color": "#3381ff",
+  "lessons": [
+    "01-what-is-a-robot",
+    "02-levers",
+    "03-gears",
+    "04-linkages",
+    "05-degrees-of-freedom"
+  ]
+}
