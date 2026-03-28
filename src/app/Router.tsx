@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { AppShell } from 'A/components/layout/AppShell';
+import { AppShell } from '@/components/layout/AppShell';
 import { HomePage } from '@/pages/HomePage';
 import { LearnPage } from '@/pages/LearnPage';
 import { LessonPage } from '@/pages/LessonPage';
