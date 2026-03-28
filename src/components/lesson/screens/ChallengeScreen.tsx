@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Lightbulb, Eye, EyeOff } from 'lucide-react';
 import type { LessonScreen } from '@/types/lesson';
-import { Button } from 'A/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 
 interface ChallengeScreenProps {
   screen: LessonScreen;
@@ -73,10 +73,10 @@ export function ChallengeScreen({ screen, onComplete }: ChallengeScreenProps) {
 
               {hintsShown < hints.length && (
                 <button
-                   onClick={revealNextHint}
-                   className="text-sm text-primary-400 hover:text-primary-300 transition-colors"
+                  onClick={revealNextHint}
+                  className="text-sm text-primary-400 hover:text-primary-300 transition-colors"
                 >
-                   Reveal next hint
+                  Reveal next hint
                 </button>
               )}
             </div>
