@@ -28,7 +28,7 @@ const borderColors: Record<ToastType, string> = {
   success: 'border-success-500/30',
   error: 'border-red-500/30',
   warning: 'border-accent-500/30',
-  info: 'border-primary-500.30',
+  info: 'border-primary-500/30',
 };
 
 export function ToastProvider({ children }: { children: ReactNode }) {
