@@ -1,4 +1,4 @@
-import { ToastProvider } from 'A/components/ui/Toast';
+import { ToastProvider } from '@/components/ui/Toast';
 import { AppRouter } from './Router';
 
 export default function App() {
