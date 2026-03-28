@@ -25,7 +25,7 @@
       "type": "concept",
       "title": "Meshing and Torque Transfer",
       "content": "When two gears mesh, the teeth push against each other. The force transfers, but the direction and magnitude change based on the size difference.\n\nImagine a tiny gear (10 teeth) driving a huge gear (100 teeth):\n- The tiny gear spins 10 times for every 1 spin of the big gear\n- But the big gear has 10x the torque\n- Useful for lifting heavy objects (like a robot arm)\n\nNow imagine a huge gear (100 teeth) driving a tiny gear (10 teeth):\n- The tiny gear spins 10 times for every 1 spin of the big gear\n- But the tiny gear has 1/10th the torque\n- Useful for high-speed motion (like a drill spinning)\n\nRobots use gear trains (multiple gears in sequence) to get the exact ratio they need. A robot that needs to move slowly but with crushing force (like a excavator) uses a high gear ratio. A robot that needs to move quickly with light force (like a picking robot) uses a low ratio.",
-      "illustration": "ðŸ¦·ü'’ª"
+      "illustration": "ðŸ¦·ðŸ’ª"
     },
     {
       "type": "interactive",
