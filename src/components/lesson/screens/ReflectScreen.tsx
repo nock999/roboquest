@@ -74,7 +74,8 @@ export function ReflectScreen({ screen, onComplete }: ReflectScreenProps) {
                   }
                 `}>
                   {answered && showCorrect ? <CheckCircle className="w-4 h-4" /> :
-                  answered && showIncorrect ? <XCircle className="w-4 h-4" /> : String.fromCharCode(65 + index)}
+                   answered && showIncorrect ? <XCircle className="w-4 h-4" /> :
+                   String.fromCharCode(65 + index)}
                 </div>
                 <div className="flex-1">
                   <p className={`font-medium ${answered && !showCorrect && !showIncorrect ? 'text-dark-500' : 'text-dark-100'}`}>
@@ -84,13 +85,13 @@ export function ReflectScreen({ screen, onComplete }: ReflectScreenProps) {
                     <motion.p
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
-                      className={`text-sn mt-2 ${showCorrect ? 'text-success-400' : 'text-red-400'}`}
+                      className={`text-sm mt-2 ${showCorrect ? 'text-success-400' : 'text-red-400'}`}
                     >
-                       {option.feedback}
+                      {option.feedback}
                     </motion.p>
                   )}
                 </div>
-               </div>
+              </div>
             </motion.button>
           );
         })}
