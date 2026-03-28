@@ -18,7 +18,7 @@
     {
       "type": "concept",
       "title": "The Four-Bar Linkage",
-      "content": "The most common linkage is the **4-bar linkage**. It has four rigid bars connected at four pivots.\n\nImagine:\n1. A **crank** (input) — rotates continuously\n2. A **coupler** — connects the crank to the output\n3. A **follower** (output) — does the work\n4. A **frame** — the fixed base that ties everything together\n\nDepending on the lengths of these bars, you can create different output motions:\n\n**Crank-Rocker:** Input rotates fully, output rocks back and forth. Great for windshield wipers and robot arms.\n\n**Crank-Slider:** Input rotates, output slides back and forth in a straight line. Great for sewing machine needles and pump pistons.\n\n*(Rocker-Rocker:** Both ends rock back and forth. Less common but useful for certain grabbing motions.",
+      "content": "The most common linkage is the **4-bar linkage**. It has four rigid bars connected at four pivots.\n\nImagine:\n1. A **crank** (input) — rotates continuously\n2. A **coupler** — connects the crank to the output\n3. A **follower** (output) — does the work\n4. A **frame** — the fixed base that ties everything together\n\nDepending on the lengths of these bars, you can create different output motions:\n\n**Crank-Rocker:** Input rotates fully, output rocks back and forth. Great for windshield wipers and robot arms.\n\n**Crank-Slider:** Input rotates, output slides back and forth in a straight line. Great for sewing machine needles and pump pistons.\n\n**Rocker-Rocker:** Both ends rock back and forth. Less common but useful for certain grabbing motions.",
       "illustration": "🔄↔️"
     },
     {
@@ -62,9 +62,9 @@
     },
     {
       "type": "solo_challenge",
-      "title": "Tdst The Stuck Linkage",
-      "content": "You've built a linkage with these dimensions:\n- Crank: 2 cm\n- Coupler: 1 cm\n- Follower: 2 cm\n- Frame: 6 cm\n\nBut when you power it on, the crank jams after rotating 180 degrees. It won't complete a full rotation.\n\nUsing the linkage simulator, adjust the bar lengths to fix this. Remember Grashof's Law: the shortest + longest must be ≤ sum of the other two.",
-      "illustration": "⚙️",
+      "title": "The Stuck Linkage",
+      "content": "You've built a linkage with these dimensions:\n- Crank: 2 cm\n- Coupler: 1 cm\n- Follower: 2 cm\n- Frame: 6 cm\n\nBut when you power it on, the crank jams after rotating 180 degrees. It won't complete a full rotation.\n\nUsing the linkage simulator, adjust the bar lengths to fix this. Remember Grashof's Law: the shortest + longest must be ≤ sum of the other two.",
+      "illustration": "⚠️",
       "widget": {
         "type": "linkage-challenge",
         "params": {
@@ -81,7 +81,7 @@
           "frameLengthMin": 2,
           "frameLengthMax": 8,
           "targetFullRotation": true,
-          "hintShow": "The shortest + longest bars should be ≤ sum of the other two. Try making the crank shorter or the frame longer."
+          "hintShow": "The shortest + longest bars should be ≤ the sum of the other two. Try making the crank shorter or the frame longer."
         }
       }
     },
@@ -115,4 +115,5 @@
         ]
       }
     }
-  C	=)�(
+  ]
+}

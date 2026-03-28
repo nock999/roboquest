@@ -24,7 +24,7 @@
     {
       "type": "concept",
       "title": "Joint Types and Their DOF",
-      "content": "Different joints provide different DOF:\n\n**REVOLUTE JOINT (1 DOF)**\nRotates around one axis, like a door hinge.\nExample: Elbow bending (rotate around one axis)\n\n**PRISMATIC JOINT (1 DOF)*\nSlides along one axis, like a drawer.\nExample: A piston moving back-and-forth\n\n*(SPHENICAL JOINT (3 DOF)"\nRotates in all directions, like a ball-and-socket.\nExample: Your shoulder (approximately)\n\n**UNIVERSAL JOINT (2 DOF)**\nRotates around two axes, like a camera tripod head.\nExample: Truck driveshaft connecting front and rear axles\n\nMost robot arms combine several revolute joints in sequence. A 6-axis robot arm has 6 revolute joints, one after another. This gives it full freedom to reach any point and orientation in its workspace.\n\nA pick-and-place robot might have 4 revolute joints (3 for positioning, 1 for rotation) plus 1 prismatic joint (up-down) = 5 DOF. Close enough for simple tasks.",
+      "content": "Different joints provide different DOF:\n\n**REVOLUTE JOINT (1 DOF)**\nRotates around one axis, like a door hinge.\nExample: Elbow bending (rotate around one axis)\n\n**PRISMATIC JOINT (1 DOF)*\nSlides along one axis, like a drawer.\nExample: A piston moving back-and-forth\n\n**SPHENICAL JOINT (3 DOF)**\nRotates in all directions, like a ball-and-socket.\nExample: Your shoulder (approximately)\n\n**UNIVERSAL JOINT (2 DOF)**\nRotates around two axes, like a camera tripod head.\nExample: Truck driveshaft connecting front and rear axles\n\nMost robot arms combine several revolute joints in sequence. A6-axis robot arm has 6 revolute joints, one after another. This gives it full freedom to reach any point and orientation in its workspace.\n\nA pick-and-place robot might have 4 revolute joints (3 for positioning, 1 for rotation) plus 1 prismatic joint (up-down) = 5 DOF. Close enough for simple tasks.",
       "illustration": "🔄"
     },
     {
@@ -55,71 +55,8 @@
     {
       "type": "guided_challenge",
       "title": "Designing a Robot for Manufacturing",
-      "content": "You're building a robot for a phone factory. The robot must:\n- Pick up a phone from a conveyor belt (position in 3D space)\n- Rotate it to scan a QR code on the back (orientation matters)\n- Place it in a box rotated correctly\n\n**Minimum DOF needed:** 6\n\n**Design:**\n- Base rotation (1 DOF) — sweep side to side\n- Shoulder (1 DOF) — reach high and low\n- Elbow (1 DOF) ⁪�Sacj far and near\n- Wrist 1 (1 DOF) — pitch the gripper\n- Wrist 2 (1 DOF) — yaw the gripper\n- Gripper Rotate (1 DOF) — roll the gripper\n\nWith 6 DOF, the robot can reach any phone position AND orient the gripper to scan from any angle. It's the industry standard for a reason.",
-      "illustration": "🤖📱"
-    },
-    {
-      "type": "solo_challenge",
-      "title": "DOF Analysis",
-      "content": "Analyze these machines and count their DOF:\n\n1. A door on a hinge (can only swing open-closed) = ?\n2. A robotic vacuum (can move forward-backward, turn left-right, but not lift) = ?\n3. A crane that moves on a rail (can move forward-backward on the rail, lift up-down, and swing left-right) = ?\n4. Your laptop screen (can only tilt up-down) = ?\n\nUse the DOF explorer to verify your answers.",
-      "illustration": "🚪🤖🏗️💻",
-      "widget": {
-        "type": "dof-analysis",
-        "params": {
-          "scenarios": [
-            {
-              "name": "Door Hinge",
-              "correctDOF": 1,
-              "hint": "A door only swings around one axis. That's 1 revolute joint."
-            },
-            {
-              "name": "Robot Vacuum",
-              "correctDOF": 3,
-              "hint": "It can move forward-backward (1), turn left-right (1), and spin its brushes (1). That's 3 DOF."
-            },
-            {
-              "name": "Crane on Rail",
-              "correctDOF": 3,
-              "hint": "Forward-backward on rail (1), lift up-down (1), swing side-to-side (1). That's 3 DOF."
-            },
-            {
-              "name": "Laptop Screen",
-              "correctDOF": 1,
-              "hint": "Tilts up-down around one hinge. That's 1 DOF."
-            }
-          ]
-        }
-      }
-    },
-    {
-      "type": "reflect",
-      "title": "Think About DOF",
-      "question": {
-        "prompt": "How many degrees of freedom does a standard door hinge have?",
-        "type": "multiple_choice",
-        "options": [
-          {
-            "text": "1 DOF (rotates around one axis only)",
-            "correct": true,
-            "feedback": "Correct! A door hinge is a revolute joint that rotates around a single axis. It can only open and close, so it has 1 DOF."
-          },
-          {
-            "text": "2 DOF (can rotate and pivot)",
-            "correct": false,
-            "feedback": "A standard hinge only allows rotation around one axis. It's not a universal joint."
-          },
-          {
-            "text": "3 DOF (can move in all directions)",
-            "correct": false,
-            "feedback": "A door hinge is fixed in place. It can only rotate around its pivot axis, giving 1 DOF."
-          },
-          {
-            "text": "6 DOF (full freedom like a robot arm)",
-            "correct": false,
-            "feedback": "A door hinge is the opposite of a 6-DOF robot. It's completely restricted to one axis of motion."
-          }
-        ]
-      }
+      "content": "You're building a robot for a phone factory. The robot must:\n- Pick up a phone from a conveyor belt (position in 3D space)\n- Rotate it to scan a QR code on the back (orientation matters)\n- Place it in a box rotated correctly\n\n**Minimum DOF needed:** 6\n\n**Design:**\n- Base rotation (1 DOF) — sweep side to side\n- Shoulder (1 DOF)— reach high and low\n- Elbow (1 DOF)— reach far and near\n- Wrist 1 (1 DOF(— pitch the gripper\n- Wrist 2 (1 DOF)— yaw the gripper\n- Gripper Rotate (1 DOF)— roll the gripper\n\nWith 6 DOF, the robot can reach any phone position AND orient the gripper to scan from any angle. It's the industry standard for a reason.",
+      "illustration": "💪"
     }
   ]
 }

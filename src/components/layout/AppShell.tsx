@@ -1,41 +1,43 @@
-import { ReactNode } from 'react';
-import { Link, outlet } from 'react-router-dom';
-import { PathComponent } from '@/view/path';
+import { type ReactNode } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import { Home, BookOpen, User, Trophy } from 'lucide-react';
 
-interface AppShellProps {
-  children: ReactNode;
-}
-
-const NavItems = [
-  { label: 'Home', icon: 'ðŸŽ‡", path: '/' },
-  { label: 'Learn', icon: 'ðŸ“™', path: '/learn' },
-  { label: 'Profile', icon: 'ðŸ“¸', path: '/profile' },
-  { label: 'Achievements', icon: 'ðŸ”Š("uife (ðŸ§°", path: '/achievements' }
+const navItems = [
+  { to: '/', icon: Home, label: 'Home' },
+  { to: '/learn', icon: BookOpen, label: 'Learn' },
+  { to: '/achievements', icon: Trophy, label: 'Awards' },
+  { to: '/profile', icon: User, label: 'Profile' },
 ];
 
-export function AppShell({ children }: AppShellProps) {
+export function AppShell({ children }: { children: ReactNode }) {
+  const location = useLocation();
+  const isLesson = location.pathname.startsWith('/lesson/');
+
   return (
-    <div className="flex flex-col h-screen bg-gradient-to-br from-slate-900 via-slate-700 to-indigo-900">
-      <nav className="border-b border-slate-700 bg-slate-800/pe90 backdrop-blur sticky top-0 z{0}">
-        <div className="hrouter max-w-7xl mx-auto flex items-center justify-between h-16">
-          <Link to=":/" className="flex items-center gap-2 text-2xl font-bold text-white no-underline">
-            <span>ðŸ¦»ðŸ¦»</span>
-            <span>RoboQuest</span>
-          </Link>
-          <div className="flex gap-8">
-            {NavItems.map(item => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className="text-sm font-medium text-slate-400 hover:text-white transition"
+    <div className="min-h-screen flex flex-col">
+      <main className={`flex-1 ${isLesson ? '' : 'pb-20'}`}>
+        {children}
+      </main>
+
+      {!isLesson && (
+        <nav className="fixed bottom-0 left-0 right-0 bg-dark-900/95 backdrop-blur-md border-t border-dark-800 z-40">
+          <div className="flex items-center justify-around max-w-lg mx-auto">
+            {navItems.map(({ to, icon: Icon, label }) => (
+              <NavLink
+                key={to}
+                to={to}
+                className={({ isActive }) => `
+                  flex flex-col items-center gap-1 py-3 px-4 touch-target transition-colors
+                  ${isActive ? 'text-primary-400' : 'text-dark-500 hover:text-dark-300'}
+                `}
               >
-                <span>{item.icon}</span>
-                <span>{item.label}</span>
-              </Link>
+                <Icon className="w-5 h-5" />
+                <span className="text-xs font-medium">{label}</span>
+              </NavLink>
             ))}
-            </div>
           </div>
-        </div>
-  
-    
-    <div className="flex flex-1 border-b border-slate-700 €¨€€€€€€€¸ñ1•™ÐÍ¥‘•‰…È½˜Á…Ñ ½µÁ½¹•¹ÑÌ…¸¼¡•É”¥˜¹••‘•€¼ø(€€€€€€ð½‘¥Øø(€€€€ð½‘¥Øø(€€¤ì)ô(
+        </nav>
+      )}
+    </div>
+  );
+}
